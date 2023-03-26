@@ -2,7 +2,7 @@ resource "null_resource" "remote"{
 	connection {
        		type = "ssh"
        		user = "ubuntu"
-       		private_key = file("CIaCS_key.ppk")
+       		private_key = file("/home/ubuntu/CIaCSTrainingTerraform/CIaCS_key.ppk")
        		host  = aws_instance.ciacs.public_ip
 	}
 	provisioner "remote-exec" {
