@@ -7,7 +7,7 @@ variable "awsprops" {
     itype = "t2.micro"
     subnet = "subnet-03f860555a8ea4854"
     publicip = true
-    keyname = "iackey"
+    keyname = "CIaCS_key"
     secgroupname = "IAC-Sec-Group"
     my-access-key = "AKIAV4QD4RE3GXS35B5"
     my-secret-key = "QJjj+EjZhqnSCRu4V91MP0wAiX1MuCD/2/CWos1"
