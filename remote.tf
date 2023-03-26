@@ -2,7 +2,7 @@ resource "null_resource" "remote"{
 	connection {
        		type = "ssh"
        		user = "ubuntu"
-       		private_key = file("F:/terraform-workstation/terraform-key.pem")
+       		private_key = file("CIaCS_key.ppk")
        		host  = aws_instance.ciacs.public_ip
 	}
 	provisioner "remote-exec" {
