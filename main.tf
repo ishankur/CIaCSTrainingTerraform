@@ -61,7 +61,20 @@ resource "aws_instance" "ciacs" {
   associate_public_ip_address = lookup(var.awsprops, "publicip")
   key_name = lookup(var.awsprops, "keyname")
 
-  user_data = templatefile("./init-script.sh","")
+  user_data = <<EOF
+    #!/bin/bash
+
+    set -e
+
+    sudo -s
+    apt-get update
+    apt-get install -y apache2
+    systemctl enable apache2
+
+    git clone https://github.com/SmithaVerity/ABTestingApp.git
+
+    mv cafe /var/www/html
+  >EOF
     
   vpc_security_group_ids = [
     aws_security_group.ciacs-sg.id
