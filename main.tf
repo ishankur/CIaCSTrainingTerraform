@@ -61,7 +61,7 @@ resource "aws_instance" "ciacs" {
   associate_public_ip_address = lookup(var.awsprops, "publicip")
   key_name = lookup(var.awsprops, "keyname")
 
-  user_data = <<EOF
+  user_data = <<EOF> initplan.sh
     #!/bin/bash
 
     set -e
@@ -74,7 +74,7 @@ resource "aws_instance" "ciacs" {
     git clone https://github.com/SmithaVerity/ABTestingApp.git
 
     mv cafe /var/www/html
-  > init.sh EOF
+  EOF
     
   vpc_security_group_ids = [
     aws_security_group.ciacs-sg.id
