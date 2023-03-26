@@ -61,7 +61,7 @@ resource "aws_instance" "ciacs" {
   associate_public_ip_address = lookup(var.awsprops, "publicip")
   key_name = lookup(var.awsprops, "keyname")
 
-  user_data = "${file("init-script.sh")}"F
+  user_data = "${file("init-script.sh")}"
     
   vpc_security_group_ids = [
     aws_security_group.ciacs-sg.id
