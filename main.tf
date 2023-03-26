@@ -9,8 +9,8 @@ variable "awsprops" {
     publicip = true
     keyname = "iackey"
     secgroupname = "IAC-Sec-Group"
-    my-access_key = "AKIAV4QD4RE3GXS35B5"
-	my-secret_key = "QJjj+EjZhqnSCRu4V91MP0wAiX1MuCD/2/CWos1"
+    my-access-key = "AKIAV4QD4RE3GXS35B5"
+    my-secret-key = "QJjj+EjZhqnSCRu4V91MP0wAiX1MuCD/2/CWos1"
   }
 }
 
@@ -36,7 +36,7 @@ resource "aws_security_group" "ciacs-sg" {
   // To Allow Port 80 Transport
   ingress {
     from_port = 80
-    protocol = ""
+    protocol = "tcp"
     to_port = 80
     cidr_blocks = ["0.0.0.0/0"]
   }
