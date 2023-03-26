@@ -9,8 +9,8 @@ variable "awsprops" {
     publicip = true
     keyname = "CIaCS_key"
     secgroupname = "IAC-Sec-Group"
-    my-access-key = "AKIAV4QD4RE3GXS35B5"
-    my-secret-key = "QJjj+EjZhqnSCRu4V91MP0wAiX1MuCD/2/CWos1"
+    my-access-key = "AKIAV4QD4RE3GXS35B5Z"
+    my-secret-key = "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"
   }
 }
 
@@ -61,7 +61,7 @@ resource "aws_instance" "ciacs" {
   associate_public_ip_address = lookup(var.awsprops, "publicip")
   key_name = lookup(var.awsprops, "keyname")
 
-  user_data = templatefile("./init-script.sh")
+  user_data = templatefile("./init-script.sh","")
     
   vpc_security_group_ids = [
     aws_security_group.ciacs-sg.id
