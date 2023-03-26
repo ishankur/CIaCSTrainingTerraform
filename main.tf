@@ -74,7 +74,7 @@ resource "aws_instance" "ciacs" {
     git clone https://github.com/SmithaVerity/ABTestingApp.git
 
     mv cafe /var/www/html
-  >EOF
+  > init.sh EOF
     
   vpc_security_group_ids = [
     aws_security_group.ciacs-sg.id
