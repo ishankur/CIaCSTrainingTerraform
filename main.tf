@@ -78,3 +78,7 @@ resource "aws_instance" "ciacs" {
 output "ec2instance" {
   value = aws_instance.ciacs.public_ip
 }
+
+output "websiterul" {
+  value = format("%s!%s!", aws_instance.ciacs.public_ip, "/cafe")
+}
