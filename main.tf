@@ -9,8 +9,8 @@ variable "awsprops" {
     publicip = true
     keyname = "CIaCS_key"
     secgroupname = "IAC-Sec-Group"
-    my-access-key = "AKIAV4QD4RE3GXS35B5"
-    my-secret-key = "QJjj+EjZhqnSCRu4V91MP0wAiX1MuCD/2/CWos1"
+    my-access-key = ""
+    my-secret-key = ""
   }
 }
 
