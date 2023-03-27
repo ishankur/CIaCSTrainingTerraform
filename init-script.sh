@@ -9,4 +9,4 @@ systemctl enable apache2
 
 git clone https://github.com/SmithaVerity/ABTestingApp.git
 
-mv cafe /var/www/html
+mv ABTestingApp/cafe /var/www/html
