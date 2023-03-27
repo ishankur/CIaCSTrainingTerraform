@@ -8,7 +8,7 @@ variable "awsprops" {
     subnet = "subnet-03f860555a8ea4854"
     publicip = true
     keyname = "CIaCS_key"
-    secgroupname = "IAC-Sec-Group"
+    secgroupname = "IaC-Sec-Group"
     my-access-key = ""
     my-secret-key = ""
   }
@@ -80,5 +80,5 @@ output "ec2instance" {
 }
 
 output "websiterul" {
-  value = format("%s!%s!", aws_instance.ciacs.public_ip, "/cafe")
+  value = format("%s%s", aws_instance.ciacs.public_ip, "/cafe")
 }
