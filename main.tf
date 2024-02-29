@@ -3,7 +3,7 @@ variable "awsprops" {
     default = {
     region = "ap-south-1"
     vpc = "vpc-04de07d7d900e861b"
-    ami = "ami-0f8ca728008ff5af4"
+    ami = "ami-03f4878755434977f"
     itype = "t2.micro"
     subnet = "subnet-03f860555a8ea4854"
     publicip = true
