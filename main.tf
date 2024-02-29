@@ -9,15 +9,11 @@ variable "awsprops" {
     publicip = true
     keyname = "CIaCTS_key"
     secgroupname = "IaC-Sec-Group"
-    my-access-key = ""
-    my-secret-key = ""
   }
 }
 
 provider "aws" {
   region = lookup(var.awsprops, "region")
-  access_key = lookup(var.awsprops, "my-access-key")
-  secret_key = lookup(var.awsprops, "my-secret-key")
 }
 
 resource "aws_security_group" "ciacs-sg" {
