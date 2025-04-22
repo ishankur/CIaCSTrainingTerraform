@@ -1,7 +1,7 @@
 #!/bin/bash
 
 set -e
-
+echo "Hello Terraform!" > test.txt
 sudo -s
 apt-get update
 apt-get install -y apache2
