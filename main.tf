@@ -1,14 +1,14 @@
 variable "awsprops" {
     type = map
     default = {
-    region = "ap-south-1"
-    vpc = "vpc-08ef158911afd6de8"
-    subnet = "subnet-0b5038c7d39ec986c"
-    ami = "ami-03f4878755434977f"
+    region = "ap-southeast-2"
+    vpc = "vpc-06da4dddeefad6821"
+    ami = "ami-0f5d1713c9af4fe30"
     itype = "t2.micro"
+    subnet = "subnet-09f20f2d2d18a5d5e"
     publicip = true
-    keyname = "CIaCTS_key"
-    secgroupname = "IaC-Sec-Group"
+    keyname = "Verity77ppkSydney"
+    secgroupname = "VerityAppSecGrp"
   }
 }
 
