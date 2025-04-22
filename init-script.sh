@@ -8,6 +8,6 @@ apt-get install -y apache2
 systemctl enable apache2
 
 git clone https://github.com/SmithaVerity/ABTestingApp.git
-echo "Hello Terraform!" > test.txt
+
 mv ABTestingApp/cafe /var/www/html
 
