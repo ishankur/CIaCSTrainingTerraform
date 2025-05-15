@@ -8,7 +8,7 @@ variable "awsprops" {
     subnet = "subnet-09fd907683b07ea88"
     publicip = true
     keyname = "IshanSingapore"
-    secgroupname = "VerityAppSecGrp"
+    secgroupname = "launch-wizard-1"
   }
 }
 
@@ -60,7 +60,7 @@ resource "aws_instance" "ciacs" {
   user_data = "${file("init-script.sh")}"
     
   vpc_security_group_ids = [
-    aws_security_group.ciacs-sg.id
+    aws_security _group.ciacs-sg.id
   ]
 
   tags = {
