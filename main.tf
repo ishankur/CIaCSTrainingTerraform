@@ -57,10 +57,11 @@ resource "aws_instance" "ciacs" {
   associate_public_ip_address = lookup(var.awsprops, "publicip")
   key_name = lookup(var.awsprops, "keyname")
 
-  user_data = "${file("init-script.sh")}"
+  user_data = file("init-script.sh")
+
     
   vpc_security_group_ids = [
-    aws_security _group.ciacs-sg.id
+    aws_security_group.ciacs-sg.id
   ]
 
   tags = {
@@ -76,5 +77,5 @@ output "ec2instance" {
 }
 
 output "websiterul" {
-  value = format("%s%s", aws_instance.ciacs.public_ip, "/cafe")
+  value = format("http://%s/cafe", aws_instance.ciacs.public_ip)
 }
