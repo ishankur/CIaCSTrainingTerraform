@@ -8,7 +8,7 @@ variable "awsprops" {
     subnet = "subnet-09fd907683b07ea88"
     publicip = true
     keyname = "IshanSingapore"
-    secgroupname = "launch-wizard-1"
+    secgroupname = "VerityAppSecGrp"
   }
 }
 
